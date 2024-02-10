@@ -1,10 +1,12 @@
 import { TimeField } from '@mui/x-date-pickers/TimeField';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 const TimerInput = () => {
 return(
-    <div>
-        Hi this is timer input
-    </div>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <TimeField />
+    </LocalizationProvider>
 )
 }
 
